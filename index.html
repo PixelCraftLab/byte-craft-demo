@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ByteCraft Demo - @vishalgowda/byte-craft</title>
+  </head>
+  <body>
+    <main id="app">
+      <h1>ByteCraft Playground</h1>
+      <p class="tagline">
+        Live demo of the npm package
+        <a href="https://www.npmjs.com/package/@vishalgowda/byte-craft">@vishalgowda/byte-craft</a>
+        - a zero-dependency binary and byte buffer toolkit.
+      </p>
+
+      <section class="card">
+        <h2>1. Build a binary packet</h2>
+        <label>
+          Message text
+          <input id="msg" type="text" value="ByteCraft" />
+        </label>
+        <label>
+          Packet ID (uint16)
+          <input id="pid" type="number" value="42" min="0" max="65535" />
+        </label>
+        <button id="run">Encode with ByteWriter</button>
+      </section>
+
+      <section class="card">
+        <h2>2. Encoded output</h2>
+        <h3>Hexdump</h3>
+        <pre id="hexdump">-</pre>
+        <h3>Hex</h3>
+        <pre id="hex">-</pre>
+        <h3>Base64</h3>
+        <pre id="b64">-</pre>
+        <h3>CRC32 checksum</h3>
+        <pre id="crc">-</pre>
+      </section>
+
+      <section class="card">
+        <h2>3. Round-trip decode with ByteReader</h2>
+        <pre id="decoded">-</pre>
+      </section>
+
+      <section class="card">
+        <h2>4. Bit flags with FlagSet</h2>
+        <pre id="flags">-</pre>
+      </section>
+
+      <footer>
+        Source on GitHub - package installed from npm:
+        <code>npm install @vishalgowda/byte-craft</code>
+      </footer>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
